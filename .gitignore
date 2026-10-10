@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.env.local
+.venv/
+__pycache__/
+*.py[cod]
+ml-service/training_data.csv
