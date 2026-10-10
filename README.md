@@ -12,7 +12,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Without Supabase environment variables, the app runs in **Demo workspace** mode. Listings and requests are kept in browser local storage; sample listings are clearly identified as demo data and are not sent to Supabase. Demo authentication is simulated. Use the role chooser to explore Donor, NGO, and Admin screens.
+Without Supabase environment variables, the app runs in **Demo workspace** mode with an empty starting dataset. Listings, requests, and simulated accounts are kept in this browser only and are not sent to Supabase. Create a demo account and donations to explore the Donor and NGO flows; Admin controls are presentation-only in demo mode.
 
 ## Connect Supabase
 
@@ -63,8 +63,8 @@ Set `VITE_MATCHING_API_URL=http://localhost:8000` in `.env.local` to have each m
 
 ## Notes
 
-- Photos in the demo and starter marketplace use Unsplash image URLs. Supabase listings can upload an image to the `food-images` bucket.
-- Impact totals in Supabase mode come from an aggregate-only database function over collected listings and verified profiles. Demo mode uses labeled illustrative totals; the monthly trend chart and emissions conversion remain illustrative sample visuals.
+- The demo workspace starts empty. New demo listings may use an image URL; Supabase listings can upload an image to the `food-images` bucket.
+- Impact totals in Supabase mode come from an aggregate-only database function over collected listings and verified profiles. Demo mode starts at zero and displays empty-state copy until real activity is recorded; no sample impact totals or partner records are included.
 - Distance contributes a neutral score until coordinates exist. Donors can supply pickup coordinates on a listing; set verified NGO coordinates in `ngo_details` after checking the organization’s address.
 - This repository is a project starter, not a food-safety certification system. The donor remains responsible for accurate ingredients, storage, and expiry details.
 
