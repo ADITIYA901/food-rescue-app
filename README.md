@@ -56,7 +56,7 @@ Set `VITE_MATCHING_API_URL=http://localhost:8000` in `.env.local` to have each m
 ## Main flows
 
 - Create food listings with category, quantity, image, preparation/expiry time, pickup location, and collection deadline.
-- Search marketplace listings by text, category, and location.
+- Search marketplace listings by text, category, and location, then switch between cards and an embedded map centered on the selected pickup. The map uses a Google Maps embed and does not need a frontend API key.
 - NGO users request listings; donors approve or reject; approved requests reserve the listing; donors mark the collection complete.
 - View match rationales, community impact charts, donor activity, role-specific dashboard sections, and admin controls for member access, NGO verification, and community reports.
 - Supabase Auth manages account sessions. Supabase Storage stores uploaded donation photos. Supabase Postgres enforces authorization with RLS.
